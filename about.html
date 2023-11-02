@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="./about.js" defer></script>
+    <script src="//unpkg.com/alpinejs" defer></script>
+    <title>Document</title>
+</head>
+<body>
+    <nav x-data="{open:false}">
+        <button @click="open = true" class="hamburger mobile-nav-button"><img src="./images/icon-hamburger.svg" width="20px" height="15px"/></button>
+        <div class="logo"><img src="./images/logo.svg" width="40px" height="15px"/></div>
+        <ul class="flex align-center gap-1 desktop-nav">
+            <li><a href="/" class="nav-item">Home</a></li>
+            <li><a href="shop.html" class="nav-item">Shop</a></li>
+            <li><a href="about.html" class="nav-item">About</a></li>
+            <li><a href="contact.html" class="nav-item">Contact</a></li>
+        </ul>
+        
+        <div width="20px"></div>
+        <div class="mobile-nav-active" x-show="open">
+            <div class="mobile-nav flex align-center ">
+                <button @click="open = false" class="close-hamburger mobile-nav-button"><img src="./images/icon-close.svg" width="15px" height="15px"/></button>
+                <ul class="flex align-center gap-1">
+                    <li><a href="/" class="nav-item">Home</a></li>
+                    <li><a href="shop.html" class="nav-item">Shop</a></li>
+                    <li><a href="about.html" class="nav-item">About</a></li>
+                    <li><a href="contact.html" class="nav-item">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="div-oppacity"></div>
+    <img src="./images/about2.jpg" class="about-images-background" id="down-image">
+    <img src="./images/about1.jpg" class="about-images-background animation" id="upper-image">
+</body>
+</html>

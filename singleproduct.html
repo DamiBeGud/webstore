@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="//unpkg.com/alpinejs" defer></script>
+    <title>Document</title>
+</head>
+<body>
+    <nav x-data="{open:false}" class="nav-shop">
+        <button @click="open = true" class="hamburger mobile-nav-button"><img src="./images/icon-hamburger.svg" width="20px" height="15px"/></button>
+        <div class="logo"><img src="./images/logo.svg" width="40px" height="15px"/></div>
+        <ul class="flex align-center gap-1 desktop-nav">
+            <li><a href="/" class="nav-item">Home</a></li>
+            <li><a href="shop.html" class="nav-item">Shop</a></li>
+            <li><a href="/" class="nav-item">About</a></li>
+            <li><a href="/" class="nav-item">Contact</a></li>
+        </ul>
+        
+        <div width="20px"></div>
+        <div class="mobile-nav-active" x-show="open">
+            <div class="mobile-nav flex align-center ">
+                <button @click="open = false" class="close-hamburger mobile-nav-button"><img src="./images/icon-close.svg" width="15px" height="15px"/></button>
+                <ul class="flex align-center gap-1">
+                    <li><a href="/" class="nav-item">Home</a></li>
+                    <li><a href="shop.html" class="nav-item">Shop</a></li>
+                    <li><a href="/" class="nav-item">About</a></li>
+                    <li><a href="/" class="nav-item">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <main>
+        <article class="single-conteiner-card margin-top-1">
+
+                    <img src="./images/image-about-light.jpg" class="single-card-image"/>
+                
+            <div class="card">
+                <a href="singleproduct.html" class="card-heading ">Hjemmelykke</a>
+                <p class="">Experience comfort and style with the 'Hjemmelykke' white chair. Its sleek design and premium materials make it a perfect addition to any space. Relax and unwind in Scandinavian-inspired elegance</p>
+                
+                <div x-data="{open:false}">
+                    <button @click="open = !open" class="dropdown-button heading"><div>Dimensions</div><div><img src="./images/arrowdown.png"/></div></button>
+                    <div x-show="open">
+                        <table>
+                            <tbody>
+                                 <tr>
+                                     <td>height</td>
+                                     <td>1500</td>
+                                 </tr>
+                                 <tr>
+                                     <td>width</td>
+                                     <td>500</td>
+                                 </tr>
+                                 <tr>
+                                     <td>depth</td>
+                                     <td>400</td>
+                                 </tr>
+                                 <tr>
+                            </tbody> 
+                        </table>
+                    </div>
+                </div>
+    
+                <div x-data="{open:false}">
+                    <button @click="open = !open" class="dropdown-button heading"><div>Style</div><div><img src="./images/arrowdown.png"/></div></button>
+                    <div x-show="open">
+                        <p>Modern, Scandinavian-inspired design with clean lines and sleek curves.</p>
+                    </div>
+                </div>
+                <div x-data="{open:false}">
+                    <button @click="open = !open" class="dropdown-button heading"><div>Assembly</div><div><img src="./images/arrowdown.png"/></div></button>
+                    <div x-show="open">
+                        <p>Minimal assembly required; hardware and instructions included. Estimated assembly time: 15 minutes.</p>
+                    </div>
+                </div>
+                <div x-data="{open:false}">
+                    <button @click="open = !open" class="dropdown-button heading"><div>Features</div><div><img src="./images/arrowdown.png"/></div></button>
+                    <div x-show="open">
+                        <ul class="dropdown-ul">
+                            <li>Premium leather upholstery for a luxurious feel</li>
+                            <li>Generously padded seat and backrest for optimal comfort</li>
+                            <li>Sturdy solid wood frame for durability and stability</li>
+                            <li>Elegant armrests for added support and relaxation</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="flex justify-between margin-top-1">
+                    <div class="card-price">34<span>$</span></div>
+                    <button class="cart-button">Buy</button>
+                </div>
+            </div>
+        </article>
+    </main>
+</body>
+</html>

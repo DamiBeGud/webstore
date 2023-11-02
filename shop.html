@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="//unpkg.com/alpinejs" defer></script>
+    <script src="./shop.js" defer></script>
+    <title>room</title>
+</head>
+<body>
+    <nav x-data="{open:false}" class="nav-shop">
+        <button @click="open = true" class="hamburger mobile-nav-button"><img src="./images/icon-hamburger.svg" width="20px" height="15px"/></button>
+        <div class="logo"><img src="./images/logo.svg" width="40px" height="15px"/></div>
+        <ul class="flex align-center gap-1 desktop-nav">
+            <li><a href="/" class="nav-item">Home</a></li>
+            <li><a href="shop.html" class="nav-item">Shop</a></li>
+            <li><a href="/" class="nav-item">About</a></li>
+            <li><a href="/" class="nav-item">Contact</a></li>
+        </ul>
+        
+        <div width="20px"></div>
+        <div class="mobile-nav-active" x-show="open">
+            <div class="mobile-nav flex align-center ">
+                <button @click="open = false" class="close-hamburger mobile-nav-button"><img src="./images/icon-close.svg" width="15px" height="15px"/></button>
+                <ul class="flex align-center gap-1">
+                    <li><a href="/" class="nav-item">Home</a></li>
+                    <li><a href="shop.html" class="nav-item">Shop</a></li>
+                    <li><a href="/" class="nav-item">About</a></li>
+                    <li><a href="/" class="nav-item">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <main>
+        <form method="post" class="search-form">
+            <input type="search" class="search-bar" placeholder="Search...">
+            <button class="search-button">Search</button> 
+        </form>
+        <section class="shop-desktop">
+            <section class="conteiner-card">
+                <div class="categories-wrapper" x-data="{open:false,openSort:false}">
+                    <div class="flex justify-centar shop-desktop-grid">
+                        <button  @click="open = !open, openSort=false" class="categories-button">Categories</button>
+                        <button  @click="openSort = !openSort, open=false" class="categories-button">Sort</button>
+                    </div>
+                        <form method="post" x-show="open">
+                            <div class="categories">
+                                <label ><input type="checkbox" name="chairs" value="chairs" class="checkbox"/>Chairs</label>
+                                <label ><input type="checkbox" name="tables" value="tables" class="checkbox"/>Tables</label>
+                                <label ><input type="checkbox" name="sofa" value="sofas" class="checkbox"/>Sofas</label>
+                                <label ><input type="checkbox" name="cabinets" value="cabinets" class="checkbox"/>Cabinets</label>
+                                <label ><input type="checkbox" name="dashboard" value="dahsboard" class="checkbox"/>TV Dashbaords</label>
+                            </div>
+                            <button>Filter</button>
+                            <button type="button" id="clear-filter">Clear</button>
+                        </form>
+                        <form method="post" x-show="openSort" >
+                            <div class="categories">
+                                <label ><input type="radio" name="sort" class="sort-lable"/>Price Ascending</label>
+                                <label ><input type="radio" name="sort" class="sort-lable"/>Price Discending</label>
+                            </div>
+                            <button>Sort</button>
+                        </form>
+                </div>
+            </section>
+            
+                <section class="articles-desktop">
+                    <article class="conteiner-card margin-top-1">
+                        <img src="./images/image-about-light.jpg" class="card-image"/>
+                        <div class="card">
+                            <a href="singleproduct.html" class="card-heading">Hjemmelykke</a>
+                            <p>Experience comfort and style with the 'Hjemmelykke' white chair. Its sleek design and premium materials make it a perfect addition to any space. Relax and unwind in Scandinavian-inspired elegance</p>
+                            <div class="flex justify-between">
+                                <div class="card-price">34<span>$</span></div>
+                                <button class="cart-button">Buy</button>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="conteiner-card margin-top-1">
+                        <img src="./images/image-about-light.jpg" class="card-image"/>
+                        <div class="card">
+                            <a href="singleproduct.html" class="card-heading">Hjemmelykke</a>
+                            <p>Experience comfort and style with the 'Hjemmelykke' white chair. Its sleek design and premium materials make it a perfect addition to any space. Relax and unwind in Scandinavian-inspired elegance</p>
+                            <div class="flex justify-between">
+                                <div class="card-price">34<span>$</span></div>
+                                <button class="cart-button">Buy</button>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="conteiner-card margin-top-1">
+                        <img src="./images/image-about-light.jpg" class="card-image"/>
+                        <div class="card">
+                            <a href="singleproduct.html" class="card-heading">Hjemmelykke</a>
+                            <p>Experience comfort and style with the 'Hjemmelykke' white chair. Its sleek design and premium materials make it a perfect addition to any space. Relax and unwind in Scandinavian-inspired elegance</p>
+                            <div class="flex justify-between">
+                                <div class="card-price">34<span>$</span></div>
+                                <button class="cart-button">Buy</button>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="conteiner-card margin-top-1">
+                        <img src="./images/image-about-light.jpg" class="card-image"/>
+                        <div class="card">
+                            <a href="singleproduct.html" class="card-heading">Hjemmelykke</a>
+                            <p>Experience comfort and style with the 'Hjemmelykke' white chair. Its sleek design and premium materials make it a perfect addition to any space. Relax and unwind in Scandinavian-inspired elegance</p>
+                            <div class="flex justify-between">
+                                <div class="card-price">34<span>$</span></div>
+                                <button class="cart-button">Buy</button>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="conteiner-card margin-top-1 ">
+                        <img src="./images/image-about-light.jpg" class="card-image"/>
+                        <div class="card">
+                            <a href="singleproduct.html" class="card-heading">Hjemmelykke</a>
+                            <p>Experience comfort and style with the 'Hjemmelykke' white chair. Its sleek design and premium materials make it a perfect addition to any space. Relax and unwind in Scandinavian-inspired elegance</p>
+                            <div class="flex justify-between">
+                                <div class="card-price">34<span>$</span></div>
+                                <button class="cart-button">Buy</button>
+                            </div>
+                        </div>
+                    </article>
+                </section>
+            
+        </section>
+    </main>
+</body>
+</html>

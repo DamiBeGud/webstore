@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="//unpkg.com/alpinejs" defer></script>
+    <title>Document</title>
+</head>
+<body>
+    <nav x-data="{open:false}">
+        <button @click="open = true" class="hamburger mobile-nav-button"><img src="./images/icon-hamburger.svg" width="20px" height="15px"/></button>
+        <div class="logo"><img src="./images/logo.svg" width="40px" height="15px"/></div>
+        <ul class="flex align-center gap-1 desktop-nav">
+            <li><a href="/" class="nav-item">Home</a></li>
+            <li><a href="shop.html" class="nav-item">Shop</a></li>
+            <li><a href="/" class="nav-item">About</a></li>
+            <li><a href="contact.html" class="nav-item">Contact</a></li>
+        </ul>
+        
+        <div width="20px"></div>
+        <div class="mobile-nav-active" x-show="open">
+            <div class="mobile-nav flex align-center ">
+                <button @click="open = false" class="close-hamburger mobile-nav-button"><img src="./images/icon-close.svg" width="15px" height="15px"/></button>
+                <ul class="flex align-center gap-1">
+                    <li><a href="/" class="nav-item">Home</a></li>
+                    <li><a href="shop.html" class="nav-item">Shop</a></li>
+                    <li><a href="/" class="nav-item">About</a></li>
+                    <li><a href="contact.html" class="nav-item">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <img src="./images/contact.png" class="contact-page" loading="lazy"/>
+    <div class="contact-page-overlay"></div>
+    <div class="content-conteiner">
+        <div class="grid-colums-span-2">
+            <h2 class="contact-white contact-big contact-weigt contact-center">Contact us</h2>
+            <div class="contact-white contact-small contact-weigt contact-center"> 
+                Thank you for considering room for your furniture needs. We're here to assist you in any way we can. <br/>Whether you have a question about a specific product, need help with an order, or just want to say hello, we'd love to hear from you.
+            </div>
+        </div>
+        <div class="center-icons-section">
+            <div class="flex gap-1 align-center margin-top-1">
+                <div class="contact-icon-wrapper"><img src="./images/location.png" class="contact-icons"/></div>
+                <div>
+                    <div class="contact-accent">Address</div>
+                    <div class="contact-white contact-small contact-weigt">Musterstr. 13, <br /> 60433 Frankfurt am Main</div>
+                </div>
+            </div>
+            <div class="flex gap-1 align-center margin-top-1">
+                <div class="contact-icon-wrapper"><img src="./images/phone.png" class="contact-icons"/></div>
+                <div>
+                    <div class="contact-accent">Phone</div>
+                    <div class="contact-white contact-small contact-weigt">0049 27 007 234</div>
+                </div>
+            </div>
+            <div class="flex gap-1 align-center margin-top-1">
+                <div class="contact-icon-wrapper"><img src="./images/email.png" class="contact-icons"/></div>
+                <div>
+                    <div class="contact-accent">Email</div>
+                    <div class="contact-white contact-small contact-weigt">contact@room.de</div>
+                </div>
+            </div>
+        </div>
+        <div>
+            <form method="post" class="contact-form">
+                <h2 class="heading">Send Message</h2>
+                <input type="name" placeholder="Full Name" class="contact-input"/>
+                <input type="email" placeholder="Email" class="contact-input margin-top-1"/>
+                <input type="text" placeholder="Type your message" class="contact-input margin-top-1"/>
+                <button class="contact-button ">Send</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

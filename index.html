@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>room</title>
+    <script src="//unpkg.com/alpinejs" defer></script>
+    <script src="./index.js" defer></script>
+</head>
+<body>
+
+        <nav x-data="{open:false}">
+            <button @click="open = true" class="hamburger mobile-nav-button"><img src="./images/icon-hamburger.svg" width="20px" height="15px"/></button>
+            <div class="logo"><img src="./images/logo.svg" width="40px" height="15px"/></div>
+            <ul class="flex align-center gap-1 desktop-nav">
+                <li><a href="/" class="nav-item">Home</a></li>
+                <li><a href="shop.html" class="nav-item">Shop</a></li>
+                <li><a href="about.html" class="nav-item">About</a></li>
+                <li><a href="contact.html" class="nav-item">Contact</a></li>
+            </ul>
+            
+            <div width="20px"></div>
+            <div class="mobile-nav-active" x-show="open">
+                <div class="mobile-nav flex align-center ">
+                    <button @click="open = false" class="close-hamburger mobile-nav-button"><img src="./images/icon-close.svg" width="15px" height="15px"/></button>
+                    <ul class="flex align-center gap-1">
+                        <li><a href="/" class="nav-item">Home</a></li>
+                        <li><a href="shop.html" class="nav-item">Shop</a></li>
+                        <li><a href="about.html" class="nav-item">About</a></li>
+                        <li><a href="contact.html" class="nav-item">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+    <main class="main-home">
+
+        <!-- Sliding part -->
+       <div class="conteiner mobile-conteiner grid-colums-span-6 conteiner-hero slider-mobile" id="0">   
+            <img class="hero-image" id="hero-image" src="./images/desktop-image-hero-1.jpg"/>
+        <div class="mobile-slider">
+                <button class="slider-button mobile-slider-button" id="prev"><img src="./images/icon-angle-left.svg"/></button>
+                <button class="slider-button mobile-slider-button" id="next"><img src="./images/icon-angle-right.svg"/></button> 
+        </div>
+       </div> 
+       <div class="conteiner grid-colums-span-4 relative">
+            <div class="conteiner-wrapper conten-id">
+                <h1 class="heading hero-heading" id="hero-title">Discover innovative ways to decorate</h1>
+                <p class="hero-paragraph" id="hero-text">
+                    We provide unmatched quality, comfort, and style for property owners across the country. 
+                    Our experts combine form and function in bringing your vision to life. Create a room in your 
+                    own style with our collection and make your property a reflection of you and what you love.
+                </p>
+                <a href="shop.html" class="flex align-center shopnow"><span class="margin-right-1">Shop</span> now<img src="./images/icon-arrow.svg" width="50px" height="15px" class="margin-left-1"/></a>
+            </div> 
+            <div class="desktop-slider flex">
+                    <button class="slider-button desktop-slider-button" id="prevDesktop"><img src="./images/icon-angle-left.svg"/></button>
+                    <button class="slider-button desktop-slider-button" id="nextDesktop"><img src="./images/icon-angle-right.svg"/></button> 
+            </div>     
+        </div>
+
+
+
+        <!-- not sliding part -->
+
+        <div class="conteiner grid-colums-span-3"><img src="./images/image-about-dark.jpg" class="image hero-image"/></div>
+        <div class="conteiner grid-colums-span-4">
+            <div class="conteiner-wrapper">
+                <h2 class="heading">ABOUT OUR FURNITURE</h2>
+                <p>Our multifunctional collection blends design and function to suit your individual taste.
+                    Make each room unique, or pick a cohesive theme that best express your interests and what
+                    inspires you. Find the furniture pieces you need, from traditional to contemporary styles
+                    or anything in between. Product specialists are available to help you create your dream space./p>
+            </div>
+        </div>
+        <div class="conteiner grid-colums-span-3"><img src="./images/image-about-light.jpg" class="image hero-image"/></div>
+        <!-- <div class="conteiner">
+            <div class="conteiner-wrapper"></div>
+        </div> -->
+    </main>
+</body>
+</html>
