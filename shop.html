@@ -38,30 +38,20 @@
             <button class="search-button">Search</button> 
         </form>
         <section class="shop-desktop">
-            <section class="conteiner-card">
-                <div class="categories-wrapper" x-data="{open:false,openSort:false}">
-                    <div class="flex justify-centar shop-desktop-grid">
-                        <button  @click="open = !open, openSort=false" class="categories-button">Categories</button>
-                        <button  @click="openSort = !openSort, open=false" class="categories-button">Sort</button>
+            <section class="conteiner-card-categories-open" id="categories">
+                <div class="categories-text hidden" id="categories-text">CATEGORIES</div>
+                <button class="button-open-close" id="close"><img src="./images/less.png" width="32px" height="30px" /></button>
+                <button class="button-open-close hidden" id="open"><img src="./images/more.png" width="32px" height="30px" /></button>
+                <div class="categories-wrapper" id="categories-wrapper">
+                    <div class="shop-categories-wrapper">
+                        <ul class="shop-categories">
+                            <li><a href="" class="shop-categorie-item">Chairs</a></li>
+                            <li><a href="" class="shop-categorie-item">Tables</a></li>
+                            <li><a href="" class="shop-categorie-item">Sofas</a></li>
+                            <li><a href="" class="shop-categorie-item">Cabinets</a></li>
+                            <li><a href="" class="shop-categorie-item">Lamps</a></li>
+                        </ul>
                     </div>
-                        <form method="post" x-show="open">
-                            <div class="categories">
-                                <label ><input type="checkbox" name="chairs" value="chairs" class="checkbox"/>Chairs</label>
-                                <label ><input type="checkbox" name="tables" value="tables" class="checkbox"/>Tables</label>
-                                <label ><input type="checkbox" name="sofa" value="sofas" class="checkbox"/>Sofas</label>
-                                <label ><input type="checkbox" name="cabinets" value="cabinets" class="checkbox"/>Cabinets</label>
-                                <label ><input type="checkbox" name="dashboard" value="dahsboard" class="checkbox"/>TV Dashbaords</label>
-                            </div>
-                            <button>Filter</button>
-                            <button type="button" id="clear-filter">Clear</button>
-                        </form>
-                        <form method="post" x-show="openSort" >
-                            <div class="categories">
-                                <label ><input type="radio" name="sort" class="sort-lable"/>Price Ascending</label>
-                                <label ><input type="radio" name="sort" class="sort-lable"/>Price Discending</label>
-                            </div>
-                            <button>Sort</button>
-                        </form>
                 </div>
             </section>
             
